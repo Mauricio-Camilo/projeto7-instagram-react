@@ -11,7 +11,9 @@ a {
     color: #262626;
 }
 
-.topo {
+/* BARRA TOPO FIXA  */
+
+header {
    background-color: white; 
     border: 1px solid #DBDBDB;
     width: 100%; 
@@ -86,7 +88,9 @@ a {
     color: white;
 }
 
-.pagina{   
+/* CONTEÚDO PRINCIPAL DA PÁGINA */
+
+main {   
     max-width: 935px;
     height: 100%;
     margin: 0 auto;   
@@ -102,6 +106,8 @@ a {
     max-width: 614px;
     background-color: #E5E5E5; 
 }
+
+/* STORIES */
 
 .stories {
     background-color: white; 
@@ -145,7 +151,9 @@ a {
     height: 66px;
 }
 
-.postagem-1 {
+/* FEED  */
+
+.postagem {
     background-color: white;
     width: 614px;
     height: 749px; 
@@ -153,7 +161,6 @@ a {
      margin-bottom: 36px;
      box-sizing: border-box;
 }    
-
 
 .post {
     display: flex;
@@ -183,10 +190,6 @@ a {
 .feed-perfil {
     width: 32px;
     height: 32px;
-}
-
-.ponto {
-
 }
 
 .post-icones {
@@ -240,8 +243,9 @@ a {
     margin-left: 10px;
 }
  
+/* BARRA LATERAL DA PÁGINA */
 
-.sidebar {
+aside {
     width: 293px;
     height: 500px;
 }
@@ -342,7 +346,9 @@ a {
 
 }
 
-  .barrainferior {  
+/* BARRA INFERIOR DA PÁGINA  */
+
+  footer {  
       display: none; 
       height: 100px;
 } 
@@ -437,7 +443,7 @@ a {
         height: 612px;
     }    
 
-   .barrainferior {
+   footer {
        display: block;
         background-color: white;
         height: 54px;
