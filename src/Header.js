@@ -1,33 +1,43 @@
 import Icones from "./Icones";
 
-export default function Header () {
-    return (
-        <header>
-        <div class="barratopo">
-          <div class="logotopo">
-            <ion-icon class="iconeinsta" name="logo-instagram"></ion-icon>
-            <div class="linhavertical"></div>
-            <img class="logoinsta" src="./Figuras/logo.png"/>
-            <Icones nome="paper-plane-outline" classe="tamanhoicone1"/>
-          </div>
-          <div class="pesquisar">
-            <p>Pesquisar</p>
-          </div>
-          <div class="icones">
-           <Icones nome="paper-plane-outline" classe="tamanhoicone"/>
-           <Icones nome="compass-outline" classe="tamanhoicone"/>
-           <Icones nome="heart-outline" classe="tamanhoicone"/>
-           <Icones nome="person-outline" classe="tamanhoicone"/>
-          </div>
+const conteudos = [
+  { nome: "paper-plane-outline", classe: "tamanhoicone" },
+  { nome: "compass-outline", classe: "tamanhoicone" },
+  { nome: "heart-outline", classe: "tamanhoicone" },
+  { nome: "person-outline", classe: "tamanhoicone" },
+]
+
+export default function Header() {
+  return (
+    <header>
+      <div class="barratopo">
+        <TopoLogos />
+        <div class="pesquisar">
+          <p>Pesquisar</p>
         </div>
-      </header>
-    );
+        <TopoIcones />
+      </div>
+    </header>
+  );
 }
 
-// function IconesTopo (props) {
-//   return (
-//     <a href="#">
-//               <ion-icon class="tamanhoicone" name={props.nome}></ion-icon>
-//             </a>
-//   )
-// }
+function TopoLogos() {
+  return (
+    <div class="logotopo">
+      <ion-icon class="iconeinsta" name="logo-instagram"></ion-icon>
+      <div class="linhavertical"></div>
+      <img class="logoinsta" src="./Figuras/logo.png" />
+      <Icones nome="paper-plane-outline" classe="tamanhoicone1" />
+    </div>
+  )
+}
+
+function TopoIcones() {
+  return (
+    <div class="icones">
+      {conteudos.map(conteudo =>
+        <Icones nome={conteudo.nome} classe={conteudo.classe} />)
+      }
+    </div>
+  )
+}
