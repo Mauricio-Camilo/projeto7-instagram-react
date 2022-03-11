@@ -290,13 +290,13 @@ aside {
 .texto2-perfil {
     font-weight: 300;
     font-size: 14px;
-    color: ##8E8E8E;
+    color: #8E8E8E;
 }
 
 .texto3-perfil {
     font-weight: 400;
     font-size: 12px;
-    color: ##8E8E8E;
+    color: #8E8E8E;
     margin-top: 6px;
 }
 
@@ -353,16 +353,10 @@ aside {
       height: 100px;
 } 
 
-    .iconesinferior {
-        display: none;
-    }
-
-    .tamanhoicone3 {
-        display: none;
-    }
+/* LAYOUT PARA TABLET */
 
 @media (max-width: 935px) {
-    .sidebar {
+    aside {
         display: none;
     }
 
@@ -376,10 +370,9 @@ aside {
     }
 }
 
+/* LAYOUT PARA CELULAR */
+
 @media (max-width: 614px) {
-    .sidebar {
-        display: none;
-    } 
 
     .logotopo {
         width: 100%;
@@ -418,7 +411,6 @@ aside {
            background-color: #E5E5E5;
            justify-content: space-evenly;
         }
-
 
        .scrool {
            position: relative;
@@ -462,8 +454,8 @@ aside {
         display: flex;
         justify-content: space-between;
     }
+
     .tamanhoicone3 {
         display: block;
         font-size: 25px;
-
     }
