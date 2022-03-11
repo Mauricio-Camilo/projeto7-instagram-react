@@ -1,3 +1,5 @@
+import Imagens from "./Imagens";
+
 export default function Stories() {
     return (
         <div class="stories">
@@ -19,7 +21,7 @@ export default function Stories() {
 function StoriesConteudo (props) {
     return (
         <div class="storiesconteudo">
-            <a href="#"><img class="storiesback" src={props.imagem} /></a>
+            <Imagens classe="storiesback" link={props.imagem}/>
             <a href="#">
                 <p>{props.perfil}</p>
             </a>

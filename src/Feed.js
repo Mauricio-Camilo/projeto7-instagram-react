@@ -1,9 +1,12 @@
+import Icones from "./Icones";
+import Imagens from "./Imagens";
+
 export default function Feed() {
     return (
         <div>
-            <Postagem imagem="Figuras/story_3.png" fotoPerfil="Figuras/gato.png" nome="meowed" curtida="respondeai" quantidade="outras 101.523 pessoas"/>
-            <Postagem imagem="Figuras/cachorrinho.png" fotoPerfil="Figuras/cachorrinho.png" nome="barked" curtida="respondeai" quantidade="outras 101.523 pessoas"/>
-            <Postagem imagem="Figuras/story_1.png" fotoPerfil="Figuras/gato.png" nome="wawawiwa" curtida="meowed" quantidade="outras 328.126 pessoas"/>           
+            <Postagem imagem="Figuras/story_3.png" fotoPerfil="Figuras/gato.png" nome="meowed" perfilCurtida="Figuras/story_7.png" curtida="respondeai" quantidade="101.523"/>
+            <Postagem imagem="Figuras/cachorrinho.png" fotoPerfil="Figuras/cachorrinho.png" nome="barked" perfilCurtida="Figuras/story_5.png"  curtida="9gag" quantidade="99.159"/>
+            <Postagem imagem="Figuras/story_1.png" fotoPerfil="Figuras/Perfil (1).png" nome="wawawiwa" perfilCurtida="Figuras/story_3.png"  curtida="meowed" quantidade="328.126"/>           
         </div>
     );
 }
@@ -13,7 +16,7 @@ function Postagem (props) {
         <div class="postagem">
         <div class="post">
             <div class="post-topo">
-                <a href="#"><img class="feed-perfil" src={props.imagem}/></a>
+                <Imagens classe="feed-perfil" link={props.imagem}/>
                 <a href="#">
                     <p>{props.nome}</p>
                 </a>
@@ -23,26 +26,17 @@ function Postagem (props) {
         <img class="postimagem" src={props.fotoPerfil} />
         <div class="post-icones">
             <div class="post-icones2">
-                <Icones icone="heart-outline"/>
-                <Icones icone="chatbubble-outline"/>
-                <Icones icone="paper-plane-outline"/>
+                <Icones nome="heart-outline" classe="tamanhoicone"/>
+                <Icones nome="chatbubble-outline" classe="tamanhoicone"/>
+                <Icones nome="paper-plane-outline" classe="tamanhoicone"/>
+
             </div>
-            <a href="#">
-                <Icones icone="bookmark-outline"/>
-            </a>
+            <Icones nome="bookmark-outline" classe="tamanhoicone"/>
         </div>
         <div class="curtida">
-            <a href="#"><img class="storiesback" src="Figuras/story_7.png" /></a>
-            <p>Curtido por <strong>{props.curtida}</strong> e <strong>{props.quantidade}</strong></p>
+            <Imagens classe="storiesback" link={props.perfilCurtida}/>
+            <p>Curtido por <strong>{props.curtida}</strong> e <strong>outras {props.quantidade} pessoas</strong></p>
         </div>
     </div>
     )
 }
-
-function Icones (props) {
-    return (
-      <a href="#">
-                <ion-icon class="tamanhoicone" name={props.icone}></ion-icon>
-              </a>
-    )
-  }

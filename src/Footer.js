@@ -1,23 +1,15 @@
-export default function Footer () {
-    return (
-        <footer>
-        <div class="iconesinferior">
-          <a href="#">
-            <ion-icon class="tamanhoicone3" name="home"></ion-icon>
-          </a>
-          <a href="#">
-            <ion-icon class="tamanhoicone3" name="search-outline"></ion-icon>
-          </a>
-          <a href="#">
-            <ion-icon class="tamanhoicone3" name="add-circle-outline"></ion-icon>
-          </a>
-          <a href="#">
-            <ion-icon class="tamanhoicone3" name="heart-outline"></ion-icon>
-          </a>
-          <a href="#">
-            <ion-icon class="tamanhoicone3" name="person-outline"></ion-icon>
-          </a>
-        </div>
-      </footer>
-    );
+import Icones from "./Icones";
+
+export default function Footer() {
+  return (
+    <footer>
+      <div class="iconesinferior">
+        <Icones nome="home" classe="tamanhoicone3" />
+        <Icones nome="search-outline" classe="tamanhoicone3" />
+        <Icones nome="add-circle-outline" classe="tamanhoicone3" />
+        <Icones nome="heart-outline" classe="tamanhoicone3" />
+        <Icones nome="person-outline" classe="tamanhoicone3" />
+      </div>
+    </footer>
+  );
 }
