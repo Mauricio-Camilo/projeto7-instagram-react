@@ -1,7 +1,7 @@
 import Icones from "./Icones";
 import Imagens from "./Imagens";
 
-const conteudos = [
+const conteudosFeed = [
     { imagem: "Figuras/story_3.png", fotoPerfil: "Figuras/gato.png", nome: "meowed", perfilCurtida: "Figuras/story_7.png", curtida: "respondeai", quantidade: "101.523" },
     { imagem: "Figuras/cachorrinho.png", fotoPerfil: "Figuras/cachorrinho.png", nome: "barked", perfilCurtida: "Figuras/story_5.png", curtida: "9gag", quantidade: "99.159" },
     { imagem: "Figuras/story_1.png", fotoPerfil: "Figuras/Perfil (1).png", nome: "wawawiwa", perfilCurtida: "Figuras/story_3.png", curtida: "meowed", quantidade: "328.126" },
@@ -12,7 +12,7 @@ const conteudosIcones = ["heart-outline", "chatbubble-outline", "paper-plane-out
 export default function Feed() {
     return (
         <div>
-            {conteudos.map(conteudo =>
+            {conteudosFeed.map(conteudo =>
                 <Postagem imagem={conteudo.imagem} fotoPerfil={conteudo.fotoPerfil} nome={conteudo.nome} perfilCurtida={conteudo.perfilCurtida} curtida={conteudo.curtida} quantidade={conteudo.quantidade} />)
             }
         </div>

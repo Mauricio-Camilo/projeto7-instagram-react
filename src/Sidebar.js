@@ -1,6 +1,6 @@
 import Imagens from "./Imagens";
 
-const conteudos = [
+const conteudosSidebar = [
   { nome: "bad.vibes.memes", imagem: "./Figuras/sugestoes-1.png" },
   { nome: "chibirdart", imagem: "./Figuras/sugestoes-2.png" },
   { nome: "razoesparaacreditar", imagem: "./Figuras/sugestoes-3.png" },
@@ -43,7 +43,7 @@ function SugestoesVerTudo() {
           <p class="texto-perfil"> Ver tudo</p>
         </a>
       </div>
-      {conteudos.map(conteudo =>
+      {conteudosSidebar.map(conteudo =>
         <SugestoesPerfis nome={conteudo.nome} imagem={conteudo.imagem} />)
       }
     </div>
